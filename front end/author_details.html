@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="" style="width: 50%; height: 50%;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li class="active"><a href="./categories.html">Genres <span
+                                            class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./categories.html">Romance</a></li>
+                                        <li><a href="./anime-details.html">Anime Details</a></li>
+                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="./signup.html">Sign Up</a></li>
+                                        <li><a href="./login.html">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./blog.html">Library</a></li>
+                                <li><a href="#">Explores</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-container">
+                            <form class="search-part">
+                                <input placeholder="Search" class="search-box">
+                                <button class="search-icon">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </a>
+                        <a href="./profile.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./categories.html">Genres</a>
+                        <a href="./anime-details.html">Harry Potter and the Order of the Phoenix</a>
+                        <span id="openAuthorDetails" style="cursor: pointer;">J.K. Rowling</span>
+                        <script>
+                            document.getElementById('openAuthorDetails').addEventListener('click', function (event) {
+                                event.preventDefault();
+
+                                var authorDetails = document.getElementById('author-details');
+                                var authorBooks = document.getElementById('author_books');
+                                var authorSeries = document.getElementById('author_series');
+
+                                // Toggle the display property to show/hide content
+                                if (authorDetails.style.display == 'none') {
+                                    authorBooks.style.display = 'none';
+                                    authorSeries.style.display = 'none';
+                                    authorDetails.style.display = 'block';
+                                }
+                            });
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!-- Anime Section Begin -->
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="author__details__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="sticky-container">
+                            <div class="sticky-element">
+                                <div class="author__details__pic set-bg" data-setbg="img/author/author2.jpg"></div>
+                                <div class="author__details__btn"
+                                    style="padding-top: 20px; text-align: center; vertical-align: middle;">
+                                    <a href="#" class="watch-btn"><span><i class="fa fa-heart-o"></i> Follow</span></a>
+                                </div>
+                                <script>
+                                    window.addEventListener('scroll', function () {
+                                        const stickyElement = document.querySelector('.sticky-element');
+                                        const screenHeight = window.innerHeight;
+                                        const elementHeight = stickyElement.offsetHeight;
+                                        const stickyPosition = screenHeight * 0.5 - elementHeight * 0.35;
+
+                                        if (window.scrollY > stickyPosition) {
+                                            stickyElement.classList.add('fixed');
+                                        } else {
+                                            stickyElement.classList.remove('fixed');
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="author-details">
+                            <div class="author__details__text">
+                                <div class="author__details__title">
+                                    <h3>J.K. Rowling</h3>
+                                </div>
+                                <div class="author__details__rating">
+                                    <div class="rating">
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star-half-o"></i> <b>4.46</b></a>
+                                    </div>
+                                    <span>777,140 Reviews</span>
+                                </div>
+                                <p style="color:white;"><b>See also: Robert Galbraith</b></p>
+                                <p>
+                                    Although she writes under the pen name J.K. Rowling, pronounced like rolling, her
+                                    name
+                                    when her first Harry Potter book was published was simply Joanne Rowling.
+                                    Anticipating that the target audience of young boys might not want to read a book
+                                    written by a woman, her publishers demanded that she use two initials, rather than
+                                    her
+                                    full name.
+                                    As she had no middle name, she chose K as the second initial of her pen name, from
+                                    her
+                                    paternal grandmother Kathleen Ada Bulgen Rowling.
+                                    She calls herself Jo and has said, "No one ever called me 'Joanne' when I was young,
+                                    unless they were angry." Following her marriage, she has sometimes used the name
+                                    Joanne
+                                    Murray when conducting personal business.
+                                    During the Leveson Inquiry she gave evidence under the name of Joanne Kathleen
+                                    Rowling.
+                                    In a 2012 interview, Rowling noted that she no longer cared that people pronounced
+                                    her
+                                    name incorrectly.
+                                    <br /></br>
+                                    Rowling was born to Peter James Rowling, a Rolls-Royce aircraft engineer, and Anne
+                                    Rowling (née Volant), on 31 July 1965 in Yate, Gloucestershire, England, 10 miles
+                                    (16
+                                    km) northeast of Bristol.
+                                    Her mother Anne was half-French and half-Scottish. Her parents first met on a train
+                                    departing from King's Cross Station bound for Arbroath in 1964. They married on 14
+                                    March
+                                    1965.
+                                    Her mother's maternal grandfather, Dugald Campbell, was born in Lamlash on the Isle
+                                    of
+                                    Arran. Her mother's paternal grandfather, Louis Volant, was awarded the Croix de
+                                    Guerre
+                                    for exceptional bravery in defending the village of Courcelles-le-Comte during the
+                                    First
+                                    World War.
+                                    <br /></br>
+                                    Rowling's sister Dianne was born at their home when Rowling was 23 months old. The
+                                    family moved to the nearby village Winterbourne when Rowling was four. She attended
+                                    St
+                                    Michael's Primary School, a school founded by abolitionist William Wilberforce and
+                                    education reformer Hannah More.
+                                    Her headmaster at St Michael's, Alfred Dunn, has been suggested as the inspiration
+                                    for
+                                    the Harry Potter headmaster Albus Dumbledore.
+                                    <br /></br>
+                                    As a child, Rowling often wrote fantasy stories, which she would usually then read
+                                    to
+                                    her sister. She recalls that: "I can still remember me telling her a story in which
+                                    she
+                                    fell down a rabbit hole and was fed strawberries by the rabbit family inside it.
+                                    Certainly the first story I ever wrote down (when I was five or six) was about a
+                                    rabbit
+                                    called Rabbit. He got the measles and was visited by his friends, including a giant
+                                    bee
+                                    called Miss Bee."
+                                    At the age of nine, Rowling moved to Church Cottage in the Gloucestershire village
+                                    of
+                                    Tutshill, close to Chepstow, Wales. When she was a young teenager, her great aunt,
+                                    who
+                                    Rowling said "taught classics and approved of a thirst for knowledge, even of a
+                                    questionable kind," gave her a very old copy of Jessica Mitford's autobiography,
+                                    Hons
+                                    and Rebels.
+                                    Mitford became Rowling's heroine, and Rowling subsequently read all of her books.
+                                    <br /></br>
+                                    Rowling has said of her teenage years, in an interview with The New Yorker, "I
+                                    wasn’t
+                                    particularly happy. I think it’s a dreadful time of life." She had a difficult
+                                    homelife;
+                                    her mother was ill and she had a difficult relationship with her father (she is no
+                                    longer on speaking terms with him).
+                                    She attended secondary school at Wyedean School and College, where her mother had
+                                    worked
+                                    as a technician in the science department. Rowling said of her adolescence,
+                                    "Hermione [a
+                                    bookish, know-it-all Harry Potter character] is loosely based on me. She's a
+                                    caricature
+                                    of me when I was eleven, which I'm not particularly proud of."
+                                    Steve Eddy, who taught Rowling English when she first arrived, remembers her as "not
+                                    exceptional" but "one of a group of girls who were bright, and quite good at
+                                    English."
+                                    Sean Harris, her best friend in the Upper Sixth owned a turquoise Ford Anglia, which
+                                    she
+                                    says inspired the one in her books.
+                                </p>
+                                <div class="author__details__widget">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <ul>
+                                                <li><span>Hometown:</span> in Yate, South Gloucestershire, England, The
+                                                    United Kingdom</li>
+                                                <li><span>Born:</span> July 31, 1965</li>
+                                                <li><span>Website:</span> http://www.jkrowling.com</li>
+                                                <li><span>Twitter:</span> jk_rowling</li>
+                                                <li><span>Genres:</span> Fiction, Young Adult, Fantasy</li>
+                                                <li><span>Influences:</span> Jane Austen, Geoffrey Chaucer, Oscar Wilde,
+                                                    C.S. Lewis</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="features-books">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="section-title">
+                                            <h4>Featured books</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="btn__all">
+                                            <a href="#" id="openAuthorBooks" class="primary-btn"
+                                                style="font-size: 12px;">View All <span class="arrow_right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="books-row">
+                                        <div class="column">
+                                            <div class="book-item">
+                                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                                <div class="book-info">
+                                                    <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                    </h3>
+                                                    <p class="book-author">by J.K. Rowling</p>
+                                                    <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                        26,
+                                                        1997</p>
+                                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                                            style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                    <div class="author__book">
+                                                        <a href="#" class="watch-btn"><span
+                                                                style="font-size: 10px;">Want to
+                                                                read</span> <i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="book-item">
+                                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                                <div class="book-info">
+                                                    <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                    </h3>
+                                                    <p class="book-author">by J.K. Rowling</p>
+                                                    <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                        26,
+                                                        1997</p>
+                                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                                            style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                    <div class="author__book">
+                                                        <a href="#" class="watch-btn"><span
+                                                                style="font-size: 10px;">Want to
+                                                                read</span> <i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="books-row">
+                                        <div class="column">
+                                            <div class="book-item">
+                                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                                <div class="book-info">
+                                                    <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                    </h3>
+                                                    <p class="book-author">by J.K. Rowling</p>
+                                                    <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                        26,
+                                                        1997</p>
+                                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                                            style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                    <div class="author__book">
+                                                        <a href="#" class="watch-btn"><span
+                                                                style="font-size: 10px;">Want to
+                                                                read</span> <i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="book-item">
+                                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                                <div class="book-info">
+                                                    <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                    </h3>
+                                                    <p class="book-author">by J.K. Rowling</p>
+                                                    <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                        26,
+                                                        1997</p>
+                                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                                            style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                    <div class="author__book">
+                                                        <a href="#" class="watch-btn"><span
+                                                                style="font-size: 10px;">Want to
+                                                                read</span> <i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="books-row">
+                                        <div class="column">
+                                            <div class="book-item">
+                                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                                <div class="book-info">
+                                                    <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                    </h3>
+                                                    <p class="book-author">by J.K. Rowling</p>
+                                                    <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                        26,
+                                                        1997</p>
+                                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                                            style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                    <div class="author__book">
+                                                        <a href="#" class="watch-btn"><span
+                                                                style="font-size: 10px;">Want to
+                                                                read</span> <i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="book-item">
+                                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                                <div class="book-info">
+                                                    <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                    </h3>
+                                                    <p class="book-author">by J.K. Rowling</p>
+                                                    <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                        26,
+                                                        1997</p>
+                                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                                            style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                    <div class="author__book">
+                                                        <a href="#" class="watch-btn"><span
+                                                                style="font-size: 10px;">Want to
+                                                                read</span> <i class="fa fa-angle-down"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="scrollTrigger">
+                                <div class="author-series">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <div class="section-title">
+                                                <h4>Popular series</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <div class="btn__all">
+                                                <a href="#" id="openAuthorSeries" class="primary-btn"
+                                                    style="font-size: 12px;">View All <span
+                                                        class="arrow_right"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="series-list">
+                                            <div class="series-item">
+                                                <span class="series-name"><a class = "seriesNav" href="./series.html"><b>Harry Porter Series</b></a></span>
+                                                <span class="books-count">6 books</span>
+                                                <p class="series-author">by J.K. Rowling</p>
+                                                <p class="author-rating" style="color:#427D9D"><i
+                                                        class="fa fa-star-half-o" style="color: #e89f12;"></i>
+                                                    <b>4.5/5</b></p>
+                                                <div class="series-book-list">
+                                                    <div class="series-book" id="seriesBook">
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book1.jpg" alt="Book 1">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book2.jpg" alt="Book 2">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book3.jpg" alt="Book 3">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book4.jpg" alt="Book 4">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book5.jpg" alt="Book 5">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book6.jpg" alt="Book 5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="series-item">
+                                                <span class="series-name"><b>Harry Porter Series</b></span>
+                                                <span class="books-count">6 books</span>
+                                                <p class="series-author">by J.K. Rowling</p>
+                                                <p class="author-rating" style="color:#427D9D"><i
+                                                        class="fa fa-star-half-o" style="color: #e89f12;"></i>
+                                                    <b>4.5/5</b></p>
+                                                <div class="series-book-list">
+                                                    <div class="series-book" id="seriesBook">
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book4.jpg" alt="Book 4">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book5.jpg" alt="Book 5">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book6.jpg" alt="Book 5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="series-item">
+                                                <span class="series-name"><b>Harry Porter Series</b></span>
+                                                <span class="books-count">6 books</span>
+                                                <p class="series-author">by J.K. Rowling</p>
+                                                <p class="author-rating" style="color:#427D9D"><i
+                                                        class="fa fa-star-half-o" style="color: #e89f12;"></i>
+                                                    <b>4.5/5</b></p>
+                                                <div class="series-book-list">
+                                                    <div class="series-book" id="seriesBook">
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book1.jpg" alt="Book 1">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book2.jpg" alt="Book 2">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book3.jpg" alt="Book 3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="series-item">
+                                                <span class="series-name"><b>Harry Porter Series</b></span>
+                                                <span class="books-count">6 books</span>
+                                                <p class="series-author">by J.K. Rowling</p>
+                                                <p class="author-rating" style="color:#427D9D"><i
+                                                        class="fa fa-star-half-o" style="color: #e89f12;"></i>
+                                                    <b>4.5/5</b></p>
+                                                <div class="series-book-list">
+                                                    <div class="series-book" id="seriesBook">
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book1.jpg" alt="Book 1">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book2.jpg" alt="Book 2">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book3.jpg" alt="Book 3">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book4.jpg" alt="Book 4">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book5.jpg" alt="Book 5">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book6.jpg" alt="Book 5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="series-item">
+                                                <span class="series-name"><b>Harry Porter Series</b></span>
+                                                <span class="books-count">6 books</span>
+                                                <p class="series-author">by J.K. Rowling</p>
+                                                <p class="author-rating" style="color:#427D9D"><i
+                                                        class="fa fa-star-half-o" style="color: #e89f12;"></i>
+                                                    <b>4.5/5</b></p>
+                                                <div class="series-book-list">
+                                                    <div class="series-book" id="seriesBook">
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book4.jpg" alt="Book 4">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book5.jpg" alt="Book 5">
+                                                        </div>
+                                                        <div class="series-book-item">
+                                                            <img src="img/trending/book6.jpg" alt="Book 5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="author_books" style="display: none;">
+                            <div class="product__page__content">
+                                <div class="product__page__title">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 col-sm-6" style="margin-top: 8px;">
+                                            <div class="section-title">
+                                                <h4>Books by J.K. Rowling</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="product__page__filter">
+                                                <p>Order by</p>
+                                                <select>
+                                                    <option value="">Top views</option>
+                                                    <option value="">Rating</option>
+                                                    <option value="">Dates</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="padding-bottom: 10px;">Showing 20 out of 643 books</p>
+                            <div class="row">
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book1.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book3.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book4.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book6.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book1.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book3.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book4.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book6.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="books-row">
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="book-item">
+                                            <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                            <div class="book-info">
+                                                <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b>
+                                                </h3>
+                                                <p class="book-author">by J.K. Rowling</p>
+                                                <p style="margin-bottom: 5px;font-size: 12px;">First published June
+                                                    26,
+                                                    1997</p>
+                                                <p class="book-rating"><i class="fa fa-star-half-o"
+                                                        style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                                <div class="author__book">
+                                                    <a href="#" class="watch-btn"><span style="font-size: 10px;">Want to
+                                                            read</span> <i class="fa fa-angle-down"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    document.getElementById('openAuthorBooks').addEventListener('click', function (event) {
+                                        event.preventDefault();
+
+                                        var authorDetails = document.getElementById('author-details');
+                                        var authorBooks = document.getElementById('author_books');
+
+                                        // Toggle the display property to show/hide content
+                                        if (authorDetails.style.display !== 'none') {
+                                            authorDetails.style.display = 'none';
+                                            authorBooks.style.display = 'block';
+                                        }
+                                        // Smooth scroll to the top of the page
+                                        var scrollToTop = window.setInterval(function () {
+                                            var position = window.scrollY;
+                                            if (position > 0) {
+                                                window.scrollTo(0, position - 50); // Adjust the value for a smoother scroll
+                                            } else {
+                                                window.clearInterval(scrollToTop);
+                                            }
+                                        }, 5);
+                                    });
+                                </script>
+                            </div>
+                            <div class="product__pagination">
+                                <a href="#" class="current-page">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#"><i class="fa fa-angle-double-right"></i></a>
+                            </div>
+
+                        </div>
+
+                        <div id="author_series" style="display: none;">
+                            <div class="product__page__content">
+                                <div class="product__page__title">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 col-sm-6" style="margin-top: 8px;">
+                                            <div class="section-title">
+                                                <h4>Series by J.K. Rowling</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="product__page__filter">
+                                                <p>Order by</p>
+                                                <select>
+                                                    <option value="">Top views</option>
+                                                    <option value="">Rating</option>
+                                                    <option value="">Dates</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="series-list">
+                                    <div class="series-item">
+                                        <span class="series-name"><b>Harry Porter Series</b></span>
+                                        <span class="books-count">6 books</span>
+                                        <p class="series-author">by J.K. Rowling</p>
+                                        <p class="author-rating" style="color:#427D9D"><i class="fa fa-star-half-o"
+                                                style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                        <div class="series-book-list">
+                                            <div class="series-book" id="seriesBook">
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book1.jpg" alt="Book 1">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book2.jpg" alt="Book 2">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book3.jpg" alt="Book 3">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book4.jpg" alt="Book 4">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book5.jpg" alt="Book 5">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book6.jpg" alt="Book 5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="series-item">
+                                        <span class="series-name"><b>Harry Porter Series</b></span>
+                                        <span class="books-count">6 books</span>
+                                        <p class="series-author">by J.K. Rowling</p>
+                                        <p class="author-rating" style="color:#427D9D"><i class="fa fa-star-half-o"
+                                                style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                        <div class="series-book-list">
+                                            <div class="series-book" id="seriesBook">
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book4.jpg" alt="Book 4">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book5.jpg" alt="Book 5">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book6.jpg" alt="Book 5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="series-item">
+                                        <span class="series-name"><b>Harry Porter Series</b></span>
+                                        <span class="books-count">6 books</span>
+                                        <p class="series-author">by J.K. Rowling</p>
+                                        <p class="author-rating" style="color:#427D9D"><i class="fa fa-star-half-o"
+                                                style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                        <div class="series-book-list">
+                                            <div class="series-book" id="seriesBook">
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book1.jpg" alt="Book 1">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book2.jpg" alt="Book 2">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book3.jpg" alt="Book 3">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="series-item">
+                                        <span class="series-name"><b>Harry Porter Series</b></span>
+                                        <span class="books-count">6 books</span>
+                                        <p class="series-author">by J.K. Rowling</p>
+                                        <p class="author-rating" style="color:#427D9D"><i class="fa fa-star-half-o"
+                                                style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                        <div class="series-book-list">
+                                            <div class="series-book" id="seriesBook">
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book1.jpg" alt="Book 1">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book2.jpg" alt="Book 2">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book3.jpg" alt="Book 3">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book4.jpg" alt="Book 4">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book5.jpg" alt="Book 5">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book6.jpg" alt="Book 5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="series-item">
+                                        <span class="series-name"><b>Harry Porter Series</b></span>
+                                        <span class="books-count">6 books</span>
+                                        <p class="series-author">by J.K. Rowling</p>
+                                        <p class="author-rating" style="color:#427D9D"><i class="fa fa-star-half-o"
+                                                style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                        <div class="series-book-list">
+                                            <div class="series-book" id="seriesBook">
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book4.jpg" alt="Book 4">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book5.jpg" alt="Book 5">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book6.jpg" alt="Book 5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="series-item">
+                                        <span class="series-name"><b>Harry Porter Series</b></span>
+                                        <span class="books-count">6 books</span>
+                                        <p class="series-author">by J.K. Rowling</p>
+                                        <p class="author-rating" style="color:#427D9D"><i class="fa fa-star-half-o"
+                                                style="color: #e89f12;"></i> <b>4.5/5</b></p>
+                                        <div class="series-book-list">
+                                            <div class="series-book" id="seriesBook">
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book1.jpg" alt="Book 1">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book2.jpg" alt="Book 2">
+                                                </div>
+                                                <div class="series-book-item">
+                                                    <img src="img/trending/book3.jpg" alt="Book 3">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                document.getElementById('openAuthorSeries').addEventListener('click', function (event) {
+                                    event.preventDefault();
+
+                                    var authorDetails = document.getElementById('author-details');
+                                    var authorSeries = document.getElementById('author_series');
+
+                                    // Toggle the display property to show/hide content
+                                    if (authorDetails.style.display !== 'none') {
+                                        authorDetails.style.display = 'none';
+                                        authorSeries.style.display = 'block';
+                                    }
+                                    // Smooth scroll to the top of the page
+                                    var scrollToTop = window.setInterval(function () {
+                                        var position = window.scrollY;
+                                        if (position > 0) {
+                                            window.scrollTo(0, position - 50); // Adjust the value for a smoother scroll
+                                        } else {
+                                            window.clearInterval(scrollToTop);
+                                        }
+                                    }, 5);
+                                });
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Anime Section End -->
+
+
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="" style="width: 50%; height: 50%;"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./categories.html">Genres</a></li>
+                            <li><a href="./blog.html">Library</a></li>
+                            <li><a href="#">Explores</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <p style="padding-top: 15px; padding-bottom: 15px;">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This web is
+                        made with <i class="fa fa-heart" aria-hidden="true"></i> by minguyet
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/details.js"></script>
+
+</body>
+
+</html>

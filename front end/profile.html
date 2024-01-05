@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="" style="width: 50%; height: 50%;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./categories.html">Genres <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./categories.html">Romance</a></li>
+                                        <li><a href="./anime-details.html">Anime Details</a></li>
+                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="./signup.html">Sign Up</a></li>
+                                        <li><a href="./login.html">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./blog.html">Library</a></li>
+                                <li><a href="./explores.html">Explores</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-container">
+                            <form class="search-part">
+                                <input placeholder="Search" class="search-box">
+                                <button class="search-icon">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </a>
+                        <a href="./profile.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-img">
+                <img src="./img/ava.png" width="200" alt="Profile Image">
+            </div>
+            <div class="profile-nav-info">
+                <h3 class="user-name" style="color: #fff;">Chocolate</h3>
+                <div class="address">
+                    <p id="state" class="state" style="color: #b7b7b7;">27 followers</p>
+                </div>
+
+            </div>
+            <div class="profile-option">
+                <div class="notification">
+                    <i class="fa fa-bell"></i>
+                    <span class="alert-message">3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-bd">
+            <div class="left-side">
+                <div class="profile-side">
+                    <p class="mobile-no"><i class="fa fa-phone"></i> +23470xxxxx700</p>
+                    <p class="user-mail"><i class="fa fa-envelope"></i> Brightisaac80@gmail.com</p>
+                    <div class="user-bio" style="margin: 20px 0;">
+                        <h3 style="color: #fff; margin-bottom: 10px">Bio</h3>
+                        <p class="bio"style="color: #b7b7b7;">
+                            Lorem ipsum dolor sit amet, hello how consectetur adipisicing elit. Sint consectetur
+                            provident magni yohoho consequuntur, voluptatibus ghdfff exercitationem at quis similique.
+                            Optio, amet!
+                        </p>
+                    </div>
+                    <div class="profile-btn">
+                        <button class="createbtn" id="Create-post"><i class="fa fa-pencil"></i> Edit profile</button>
+                    </div>
+                    <div class="user-rating">
+                        <h3 class="rating">4.5</h3>
+                        <div class="rate">
+                            <div class="star-outer">
+                                <div class="star-inner">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <span class="no-of-user-rate"><span>123</span>&nbsp;&nbsp;reviews</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-side" style="height: 100%;">
+                <div class="nav">
+                    <ul>
+                        <li onclick="tabs(0)" class="user-post active"> Activity</li>
+                        <li onclick="tabs(1)" class="user-review"> Following</li>
+                        <li onclick="tabs(2)" class="user-setting"> Reviews</li>
+                        <li onclick="tabs(3)" class="user-setting"> Setting</li>
+
+                    </ul>
+                </div>
+                <div class="profile-body" style="width: 100%;">
+                    <div class="profile-posts tab">
+                        <h3 style="color: #fff;">Your Post</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
+                            quidem quasi, tenetur molestiae. Architecto mollitia laborum possimus iste esse. Perferendis
+                            tempora consectetur, quae qui nihil voluptas. Maiores debitis
+                            repellendus excepturi quisquam temporibus quam nobis voluptatem, reiciendis distinctio
+                            deserunt vitae! Maxime provident, distinctio animi commodi nemo, eveniet fugit porro quos
+                            nesciunt quidem a, corporis nisi dolorum minus sit eaque error
+                            sequi ullam. Quidem ut fugiat, praesentium velit aliquam!</p>
+                    </div>
+                    <div class="profile-reviews tab">
+                        <h1>User reviews</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
+                            quidem quasi, tenetur molestiae. Architecto mollitia laborum possimus iste esse. Perferendis
+                            tempora consectetur, quae qui nihil voluptas. Maiores debitis
+                            repellendus excepturi quisquam temporibus quam nobis voluptatem, reiciendis distinctio
+                            deserunt vitae! Maxime provident, distinctio animi commodi nemo, eveniet fugit porro quos
+                            nesciunt quidem a, corporis nisi dolorum minus sit eaque error
+                            sequi ullam. Quidem ut fugiat, praesentium velit aliquam!</p>
+                    </div>
+                    <div class="profile-settings tab">
+                        <div class="account-setting">
+                            <h3 style="color: #427D9D;">User reviews</h3>
+                            <p style="color: #b7b7b7;">“Is it true that you shouted at Professor Umbridge?"
+                                <br>
+                                "Yes."
+                                <br>
+                                "You called her a liar?"
+                                <br>
+                                "Yes."
+                                <br>
+                                "You told her He Who Must Not Be Named is back?"
+                                <br>
+                                "Yes."
+                                <br>
+                                "Have a seat cause we bloody need to talk about trans lives."
+                                <br><br>
+                                I love Harry Potter as much as anyone, which is why I urge everyone who spends money on these books to also support the trans community.
+                                <br><br>
+                                To say it with the author's words: “If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals.” Well.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="" style="width: 50%; height: 50%;"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./categories.html">Genres</a></li>
+                            <li><a href="./blog.html">Library</a></li>
+                            <li><a href="#">Explores</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <p style="padding-top: 15px; padding-bottom: 15px;">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This web is
+                        made with <i class="fa fa-heart" aria-hidden="true"></i> by minguyet
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .profile-header {
+        background-image: url(./img/hero/test5.jpg);
+        width: 100%;
+        display: flex;
+        height: 190px;
+        position: relative;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-img {
+        float: left;
+        width: 340px;
+        height: 200px;
+    }
+
+    .profile-img img {
+        border-radius: 50%;
+        height: 230px;
+        width: 230px;
+        border: 5px solid #fff;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        left: 50px;
+        top: 20px;
+        z-index: 5;
+        background: transparent;
+        backdrop-filter: blur(5px);
+
+    }
+
+    .profile-nav-info {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 60px;
+    }
+
+    .profile-nav-info h3 {
+        font-variant: small-caps;
+        font-size: 2rem;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+    .profile-nav-info .address {
+        display: flex;
+        font-weight: bold;
+        color: #777;
+    }
+
+    .profile-nav-info .address p {
+        margin-right: 5px;
+    }
+
+    .profile-option {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        outline: none;
+        background: #427D9D;
+    }
+
+    .profile-option:hover {
+        background: #fff;
+        border: 1px solid #427D9D;
+    }
+
+    .profile-option:hover .notification i {
+        color: #427D9D;
+    }
+
+    .profile-option:hover span {
+        background: #427D9D;
+    }
+
+    .profile-option .notification i {
+        color: #fff;
+        font-size: 1.2rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .profile-option .notification .alert-message {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #fff;
+        color: #427D9D;
+        border: 1px solid #427D9D;
+        padding: 5px;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .main-bd {
+        width: 100%;
+        display: flex;
+        padding-right: 15px;
+    }
+
+    .profile-side {
+        width: 300px;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        margin-top: 90px;
+        margin-left: 10px;
+        z-index: 99;
+        border: 2px solid #b7b7b7;
+        border-radius: 16px;
+    }
+
+    .profile-side p {
+        margin-bottom: 7px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .profile-side p i {
+        color: #427D9D;
+        margin-right: 10px;
+    }
+
+    .mobile-no i {
+        transform: rotateY(180deg);
+        color: #427D9D;
+    }
+
+    .profile-btn {
+        display: flex;
+    }
+
+    button.chatbtn,
+    button.createbtn {
+        border: 0;
+        padding: 10px;
+        width: 100%;
+        border-radius: 3px;
+        background: #427D9D;
+        color: #fff;
+        font-family: "Bree Serif";
+        font-size: 1rem;
+        margin: 5px 2px;
+        cursor: pointer;
+        outline: none;
+        margin-bottom: 10px;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    button.chatbtn:hover,
+    button.createbtn:hover {
+        background: rgba(288, 0, 70, 0.9);
+    }
+
+    button.chatbtn i,
+    button.createbtn i {
+        margin-right: 5px;
+    }
+
+    .user-rating {
+        display: flex;
+    }
+
+    .user-rating h3 {
+        font-size: 2.5rem;
+        font-weight: 200;
+        margin-right: 5px;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .user-rating .no-of-user-rate {
+        font-size: 0.9rem;
+    }
+
+    .rate {
+        padding-top: 6px;
+    }
+
+    .rate i {
+        font-size: 0.9rem;
+        color: #427D9D;
+    }
+
+    .nav {
+        width: 100%;
+        z-index: -1;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        height: 45px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid #6666664b;
+        color: #fff;
+    }
+
+    .nav ul li {
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav ul li:hover,
+    .nav ul li.active {
+        box-shadow: 0px -3px 0px #427D9D inset;
+    }
+
+    .profile-body {
+        height: 100%;
+        z-index: -1;
+    }
+
+    .tab {
+        display: none;
+    }
+
+    .tab {
+        margin: 20px;
+        width: 100%;
+    }
+
+    @media (max-width: 1100px) {
+        .profile-side {
+            width: 250px;
+            padding: 90px 15px 20px;
+        }
+
+        .profile-img img {
+            height: 200px;
+            width: 200px;
+            left: 50px;
+            top: 50px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        body {
+            margin: 0 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .profile-img {
+            float: left;
+            width: 100%;
+            height: 200px;
+        }
+
+        .profile-img img {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            left: 0px;
+        }
+
+        .profile-nav-info {
+            text-align: center;
+        }
+
+        .profile-option {
+            right: 20px;
+            top: 75%;
+            transform: translateY(50%);
+        }
+
+        .main-bd {
+            flex-direction: column;
+            padding-right: 0;
+        }
+
+        .profile-side {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            margin: 5px 0;
+        }
+
+        .profile-nav-info .address {
+            justify-content: center;
+        }
+
+        .user-rating {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        .profile-option {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 15px;
+            top: 83%;
+        }
+
+        .profile-option .notification .alert-message {
+            top: -3px;
+            right: -4px;
+            padding: 4px;
+            height: 15px;
+            width: 15px;
+            font-size: 0.7rem;
+        }
+
+        .profile-nav-info h3 {
+            font-size: 1.9rem;
+        }
+
+        .profile-nav-info .address p,
+        .profile-nav-info .address span {
+            font-size: 0.7rem;
+        }
+    }
+
+    .tab h3 {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        font-weight: 700;
+    }
+
+    
+</style>
+
+</html>

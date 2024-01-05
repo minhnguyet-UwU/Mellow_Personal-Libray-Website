@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="" style="width: 50%; height: 50%;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./categories.html">Genres <span
+                                            class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./categories.html">Romance</a></li>
+                                        <li><a href="./anime-details.html">Anime Details</a></li>
+                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="./signup.html">Sign Up</a></li>
+                                        <li><a href="./login.html">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="./blog.html">Library</a></li>
+                                <li><a href="./explores.html">Explores</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-container">
+                            <form class="search-part">
+                                <input placeholder="Search" class="search-box">
+                                <button class="search-icon">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </a>
+                        <a href="./profile.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Normal Breadcrumb Begin -->
+    <section class="normal-breadcrumb set-bg" data-setbg="img/hero/test.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>My Books</h2>
+                        <p>Welcome to the library.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Normal Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="shelves">
+                    <div class="section-title" style="width:fit-content;">
+                        <h4>Shelves</h4>
+                    </div>
+                    <ul>
+                        <li class="active" onclick="selectShelf(this)">All</li>
+                        <li onclick="selectShelf(this)">Favourites</li>
+                        <li onclick="selectShelf(this)">Want to Read</li>
+                        <li onclick="selectShelf(this)">Reading</li>
+                        <li onclick="selectShelf(this)">Read</li>
+                        <li onclick="selectShelf(this)">Other Shelves</li>
+                        <!-- Add more shelves as needed -->
+                    </ul>
+                    <hr>
+                    <div class="author__details__btn"
+                        style="text-align: center; vertical-align: middle; align-items: center;">
+                        <a href="#" class="watch-btn"><span style="background: none; color: #427D9D;"><i class="fa fa-plus-circle" style="padding-right: 5px; font-size: 16px;"></i> <b>Add shelves</b></span></a>
+                    </div>
+                </div>
+                
+                <script>
+                    function selectShelf(element) {
+                        // Remove 'active' class from all shelves
+                        const shelves = document.querySelectorAll('.shelves li');
+                        shelves.forEach(shelf => {
+                            shelf.classList.remove('active');
+                        });
+
+                        // Add 'active' class to the clicked shelf
+                        element.classList.add('active');
+                    }
+                </script>
+                
+                <div class="books">
+                    <div class="book__details__review__title">
+                        <div class="book__details__review__filter"
+                            style=" display: flex; justify-content: flex-end; padding-bottom: 20px;">
+                            <p>Sort by</p>
+                            <select>
+                                <option value="">Latest</option>
+                                <option value="">Oldest</option>
+                                <option value="">Popular</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="books-row">
+                        <div class="row-column" style="padding-right: 30px; padding-left: 20px;">
+                            <!-- New column for the row number -->
+                            <div class="row-number">
+                                <p>1</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                    </div>
+                    <div class="books-row">
+                        <div class="row-column" style="padding-right: 30px; padding-left: 20px;">
+                            <!-- New column for the row number -->
+                            <div class="row-number">
+                                <p>2</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                    </div>
+                    <div class="books-row">
+                        <div class="row-column" style="padding-right: 30px; padding-left: 20px;">
+                            <!-- New column for the row number -->
+                            <div class="row-number">
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                    </div>
+                    <div class="books-row">
+                        <div class="row-column" style="padding-right: 30px; padding-left: 20px;">
+                            <!-- New column for the row number -->
+                            <div class="row-number">
+                                <p>4</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                    </div>
+                    <div class="books-row">
+                        <div class="row-column" style="padding-right: 30px; padding-left: 20px;">
+                            <!-- New column for the row number -->
+                            <div class="row-number">
+                                <p>5</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book2.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                        <div class="column">
+                            <div class="book-item">
+                                <img class="book-cover" src="img/trending/book5.jpg" alt="Book Cover">
+                                <div class="book-info">
+                                    <div class="title-bar">
+                                        <h3 class="book-title"><b>Harry Potter and the Sorcerer's Stone</b></h3>
+                                        <i class="fa fa-ellipsis-v"
+                                            style="padding-left: 20px; color: #ffffff; margin-top: 5px;"></i>
+                                    </div>
+                                    <p class="book-author">by J.K. Rowling</p>
+                                    <p style="margin-bottom: 5px; font-size: 12px;">First published June 26, 1997</p>
+                                    <p class="book-rating"><i class="fa fa-star-half-o"
+                                            style="color: #e89f12;"></i><b>4.5/5</b></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="font-size: 13px; margin:0px">Added on Sep 07, 2023</p>
+                        </div>
+                    </div>
+                    <div class="product__pagination">
+                        <a href="#" class="current-page">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#"><i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="" style="width: 50%; height: 50%;"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./categories.html">Genres</a></li>
+                            <li><a href="./blog.html">Library</a></li>
+                            <li><a href="#">Explores</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <p style="padding-top: 15px; padding-bottom: 15px;">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This web is
+                        made with <i class="fa fa-heart" aria-hidden="true"></i> by minguyet
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

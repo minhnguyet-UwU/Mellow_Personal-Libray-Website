@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="" style="width: 50%; height: 50%;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li class="active"><a href="./categories.html">Genres <span
+                                            class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./categories.html">Romance</a></li>
+                                        <li><a href="./anime-details.html">Anime Details</a></li>
+                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="./signup.html">Sign Up</a></li>
+                                        <li><a href="./login.html">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./blog.html">Library</a></li>
+                                <li><a href="#">Explores</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="#" class="search-container">
+                            <form class="search-part">
+                                <input placeholder="Search" class="search-box">
+                                <button class="search-icon">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </a>
+                        <a href="./profile.html"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./categories.html">Genres</a>
+                        <span>Harry Potter and the Order of the Phoenix</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Anime Section Begin -->
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="book__details__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="sticky-container">
+                            <div class="sticky-element">
+                                <div class="book__details__pic set-bg" data-setbg="img/trending/book2.jpg"></div>
+                                <div class="book__details__btn"
+                                    style="padding-top: 20px; text-align: center; vertical-align: middle;">
+                                    <a href="#" class="watch-btn"><span>Want to read</span> <i
+                                            class="fa fa-angle-down"></i></a>
+                                </div>
+                                <script>
+                                    window.addEventListener('scroll', function () {
+                                        const stickyElement = document.querySelector('.sticky-element');
+                                        const screenHeight = window.innerHeight;
+                                        const elementHeight = stickyElement.offsetHeight;
+                                        const stickyPosition = screenHeight * 0.5 - elementHeight * 0.35;
+
+                                        if (window.scrollY > stickyPosition) {
+                                            stickyElement.classList.add('fixed');
+                                        } else {
+                                            stickyElement.classList.remove('fixed');
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="book__details__text">
+                            <div class="book__details__title">
+                                <h3>Harry Potter and the Order of the Phoenix</h3>
+                                <span>by J.K. Rowling</span>
+                            </div>
+                            <div class="book__details__rating">
+                                <div class="rating">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i> <b>4.5</b></a>
+                                </div>
+                                <span>60,698 Reviews</span>
+                            </div>
+                            <p style="color:white;"><b>Could you survive on your own in the wild, with every one out to
+                                    make sure you don't live to see the morning?</b></p>
+                            <p>Harry Potter is about to start his fifth year at Hogwarts School of Witchcraft and
+                                Wizardry.
+                                Unlike most schoolboys, Harry never enjoys his summer holidays, but this summer is even
+                                worse than usual.
+                                The Dursleys, of course, are making his life a misery, but even his best friends, Ron
+                                and Hermione, seem to be neglecting him.
+                                <br /><br />Harry has had enough. He is beginning to think he must do something,
+                                anything, to change his situation,
+                                when the summer holidays come to an end in a very dramatic fashion. What Harry is about
+                                to discover in his new year at Hogwarts will turn his world upside down...
+                            </p>
+                            <div class="book__details__widget">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <ul>
+                                            <li><span>Series:</span> Harry Potter #5</li>
+                                            <li><span>Genres:</span> Young Adult, Fiction, Magic, Childrens, Audiobook,
+                                                Adventure, Middle Grade</li>
+                                            <li><span>Published date:</span> June 21, 2003</li>
+                                            <li><span>Pages:</span> 912</li>
+                                            <li><span>Format:</span> Paperback</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="author-section" style="padding-top: 20px;">
+                                <div class="section-title">
+                                    <h4>About the author</h4>
+                                </div>
+                                <div class="author-info">
+                                    <div class="author-image">
+                                        <img src="img/author/author2.jpg" alt="Author Image">
+                                    </div>
+                                    <div class="author-details" style="padding:7px">
+                                        <h5><b><a href="./author_details.html">J.K. Rowling</a></b></h5>
+                                        <p>643 books</p>
+                                    </div>
+                                    <div class="follow-button">
+                                        <button class="follow-btn"><i class="fa fa-heart-o"></i> Follow</button>
+                                    </div>
+                                </div>
+                                <div class="author-description">
+                                    <p>
+                                        Although she writes under the pen name J.K. Rowling, pronounced like rolling,
+                                        her name when her first Harry Potter book was published was simply Joanne
+                                        Rowling.
+                                        Anticipating that the target audience of young boys might not want to read a
+                                        book written by a woman, her publishers demanded that she use two initials,
+                                        rather than her full name.
+                                        As she had no middle name, she chose K as the second initial of her pen name,
+                                        from her paternal grandmother Kathleen Ada Bulgen Rowling. She calls herself Jo
+                                        and has said, "No one ever called me 'Joanne' when I was young, unless they were
+                                        angry."
+                                        Following her marriage, she has sometimes used the name Joanne Murray when
+                                        conducting personal business. During the Leveson Inquiry she gave evidence under
+                                        the name of Joanne Kathleen Rowling.
+                                        In a 2012 interview, Rowling noted that she no longer cared that people
+                                        pronounced her name incorrectly.
+                                        <br /><br />Rowling was born to Peter James Rowling, a Rolls-Royce aircraft
+                                        engineer, and Anne Rowling (née Volant), on 31 July 1965 in Yate,
+                                        Gloucestershire, England, 10 miles (16 km) northeast of Bristol.
+                                        Her mother Anne was half-French and half-Scottish. Her parents first met on a
+                                        train departing from King's Cross Station bound for Arbroath in 1964. They
+                                        married on 14 March 1965.
+                                        Her mother's maternal grandfather, Dugald Campbell, was born in Lamlash on the
+                                        Isle of Arran. Her mother's paternal grandfather, Louis Volant, was awarded the
+                                        Croix de Guerre for exceptional bravery in defending the village of
+                                        Courcelles-le-Comte during the First World War.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="book__details__review" style="padding-top: 40px;">
+                                <div class="book__details__review__title">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <div class="section-title">
+                                                <h4>Reviews</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="book__details__review__filter">
+                                                <p>Sort by</p>
+                                                <select>
+                                                    <option value="">Latest</option>
+                                                    <option value="">Oldest</option>
+                                                    <option value="">Popular</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book__review__item" >
+                                    <div class="book__review__item__pic">
+                                        <img src="img/anime/review-1.jpg" alt="">
+                                    </div>
+                                    <div class="book__review__item__text">
+                                        <div class="user-info">
+                                            <h6>
+                                                <span class="author-name">Chris Curry</span>
+                                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                            </h6>
+                                        </div>
+                                        <div class="review-info">
+                                            <p class="created-date">December 19, 2015</p>
+                                            <p class="comment">
+                                                "I've always wanted to try firewhisky -"
+                                                <br /><br>
+                                                Right from the beginning, you'll find everything to be intriguing as
+                                                always, with an excellent set of new characters being introduced.
+                                                The main characters around Harry are of course the main focus, and the
+                                                narration inherits a lot from how the teenage Harry views the world.
+                                                Average emotional rollercoaster of a teenager blends in nicely with the
+                                                main plot, and makes things more interesting.
+                                            </p>
+                                        </div>
+                                        <div class="like-button" onclick="toggleLike()">
+                                            <i class="like-icon fa fa-thumbs-o-up"></i>
+                                            <span id="like-count">1537</span>people like this
+                                        </div>
+                                        <script>
+                                            let isLiked = false;
+                                            let likeCount = 1537;
+
+                                            function toggleLike() {
+                                                if (isLiked) {
+                                                    // If already liked, unlike
+                                                    likeCount--;
+                                                    isLiked = false;
+                                                } else {
+                                                    // If not liked, like
+                                                    likeCount++;
+                                                    isLiked = true;
+                                                }
+
+                                                // Update like count and icon color
+                                                document.getElementById('like-count').textContent = likeCount;
+                                                updateLikeIcon();
+                                            }
+
+                                            function updateLikeIcon() {
+                                                const likeIcon = document.querySelector('.like-icon');
+
+                                                // Toggle between filled and outlined heart icons
+                                                if (isLiked) {
+                                                    likeIcon.classList.remove('fa-thumbs-o-up');
+                                                    likeIcon.classList.add('fa-thumbs-up');
+                                                } else {
+                                                    likeIcon.classList.remove('fa-thumbs-up');
+                                                    likeIcon.classList.add('fa-thumbs-o-up');
+                                                }
+                                            }
+                                        </script>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="book__review__item">
+                                    <div class="book__review__item__pic">
+                                        <img src="img/anime/review-2.jpg" alt="">
+                                    </div>
+                                    <div class="book__review__item__text">
+                                        <div class="user-info">
+                                            <h6>
+                                                <span class="author-name">Chris Curry</span>
+                                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                            </h6>
+                                        </div>
+                                        <div class="review-info">
+                                            <p class="created-date">December 19, 2015</p>
+                                            <p class="comment">
+                                                "Ask us no questions and we'll tell you no lies,"
+                                                <br /><br>
+                                                We've finally moved in to the core of the story, and an-action-packed
+                                                story is being unfolded - full of dark times - with no more holding
+                                                back.
+                                                If it wasn't for Rowling's writing, this might've felt like one complex
+                                                story, not to mention how unbearable it would've been with Umbrige, and
+                                                also with Lestrange and Fudge closely behind.
+                                                But everything's put in place perfectly, and even the annoying
+                                                characters do their part really well. And the ending chapters - though
+                                                disappointing - are the best and most dramatic in the series so far.
+                                                This has been one amazing ride, while proving the 'Last-is-Best' still
+                                                to be true.
+                                            </p>
+                                        </div>
+                                        <div class="like-button" onclick="toggleLike()">
+                                            <i class="like-icon fa fa-thumbs-o-up"></i>
+                                            <span id="like-count">1537</span>people like this
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book__review__item">
+                                    <div class="book__review__item__pic">
+                                        <img src="img/anime/review-3.jpg" alt="">
+                                    </div>
+                                    <div class="book__review__item__text">
+                                        <div class="user-info">
+                                            <h6>
+                                                <span class="author-name">Chris Curry</span>
+                                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                            </h6>
+                                        </div>
+                                        <div class="review-info">
+                                            <p class="created-date">December 19, 2015</p>
+                                            <p class="comment">
+                                                I had to re read it. I was in such a nostalgic mood.
+                                            </p>
+                                        </div>
+                                        <div class="like-button" onclick="toggleLike()">
+                                            <i class="like-icon fa fa-thumbs-o-up"></i>
+                                            <span id="like-count">1537</span>people like this
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book__review__item">
+                                    <div class="book__review__item__pic">
+                                        <img src="img/anime/review-4.jpg" alt="">
+                                    </div>
+                                    <div class="book__review__item__text">
+                                        <div class="user-info">
+                                            <h6>
+                                                <span class="author-name">Chris Curry</span>
+                                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                            </h6>
+                                        </div>
+                                        <div class="review-info">
+                                            <p class="created-date">December 19, 2015</p>
+                                            <p class="comment">
+                                                It's a transitional book, which holds back its potential, but it adds
+                                                greatly to its mythos with excellent new characters.
+                                            </p>
+                                        </div>
+                                        <div class="like-button" onclick="toggleLike()">
+                                            <i class="like-icon fa fa-thumbs-o-up"></i>
+                                            <span id="like-count">1537</span>people like this
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book__review__item">
+                                    <div class="book__review__item__pic">
+                                        <img src="img/anime/review-5.jpg" alt="">
+                                    </div>
+                                    <div class="book__review__item__text">
+                                        <div class="user-info">
+                                            <h6>
+                                                <span class="author-name">Chris Curry</span>
+                                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                            </h6>
+                                        </div>
+                                        <div class="review-info">
+                                            <p class="created-date">December 19, 2015</p>
+                                            <p class="comment">
+                                                I finished this book with tears in my eyes and laughter on my lips.
+                                                <br />Just wow, excellent book!
+                                            </p>
+                                        </div>
+                                        <div class="like-button" onclick="toggleLike()">
+                                            <i class="like-icon fa fa-thumbs-o-up"></i>
+                                            <span id="like-count">1537</span>people like this
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book__review__item">
+                                    <div class="book__review__item__pic">
+                                        <img src="img/anime/review-6.jpg" alt="">
+                                    </div>
+                                    <div class="book__review__item__text">
+                                        <div class="user-info">
+                                            <h6>
+                                                <span class="author-name">Chris Curry</span>
+                                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                            </h6>
+                                        </div>
+                                        <div class="review-info">
+                                            <p class="created-date">December 19, 2015</p>
+                                            <p class="comment">
+                                                It only took me 7 months, but at least i've FINALLY finished the damn
+                                                book!
+                                            </p>
+                                        </div>
+                                        <div class="like-button" onclick="toggleLike()">
+                                            <i class="like-icon fa fa-thumbs-o-up"></i>
+                                            <span id="like-count">1537</span>people like this
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__pagination" style="text-align: right; padding-top: 30px;">
+                                    <a href="#" class="current-page">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div id="scrollTrigger">
+                                <div class="book__details__form">
+                                    <div class="section-title">
+                                        <h4>What do you think</h4>
+                                    </div>
+                                    <form action="#">
+                                        <div class="rating">
+                                            <span class="rating-text">Rate this book:</span>
+                                            <div class="star-rating">
+                                                <span class="star" data-value="1"><i class="fa fa-star"></i></span>
+                                                <span class="star" data-value="2"><i class="fa fa-star"></i></span>
+                                                <span class="star" data-value="3"><i class="fa fa-star"></i></span>
+                                                <span class="star" data-value="4"><i class="fa fa-star"></i></span>
+                                                <span class="star" data-value="5"><i class="fa fa-star"></i></span>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            const stars = document.querySelectorAll('.star');
+
+                                            stars.forEach(star => {
+
+                                                star.addEventListener('click', () => {
+                                                    const value = star.getAttribute('data-value');
+                                                    resetStars();
+                                                    highlightStars(value);
+                                                });
+                                            });
+
+                                            function resetStars() {
+                                                stars.forEach(star => star.classList.remove('selected'));
+                                            }
+
+                                            function highlightStars(value) {
+                                                for (let i = 0; i < value; i++) {
+                                                    stars[i].classList.add('selected');
+                                                }
+                                            }
+                                        </script>
+                                        <textarea placeholder="Your Comment"></textarea>
+                                        <div class="review-button">
+                                            <button class="review-btn" type="submit">
+                                                <i class="fa fa-location-arrow"></i> Review</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Anime Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="" style="width: 50%; height: 50%;"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./categories.html">Genres</a></li>
+                            <li><a href="./blog.html">Library</a></li>
+                            <li><a href="#">Explores</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <p style="padding-top: 15px; padding-bottom: 15px;">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This web is
+                        made with <i class="fa fa-heart" aria-hidden="true"></i> by minguyet
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/details.js"></script>
+
+</body>
+
+</html>
