@@ -386,6 +386,38 @@ input::placeholder {
 	color: #427D9D;
 }
 
+/* Existing styles remain unchanged */
+
+/* Add this style to properly position the suggestions list */
+.search-suggestions {
+    position: absolute;
+    top: 51px; /* Position below the input */
+    left: 0;
+    width: calc(100% - 39px); /* Adjust the width as needed */
+    border-left: 1.5px solid #333;
+	border-right: 1.5px solid #333;
+	background-color: #0c0e13;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1000; /* Ensure the suggestions appear above other elements */
+    text-align: left; /* Align text to the left */
+}
+
+.search-suggestions li {
+    padding: 8px;
+    cursor: pointer;
+    text-align: left; /* Align text to the left */
+	font-size: 14px;
+	border-bottom: 1.5px solid #333;
+}
+
+.search-suggestions li:hover {
+    background-color: #427D9D;
+}
+
+
 /*---------------------
   Header
 -----------------------*/
@@ -1108,6 +1140,7 @@ input::placeholder {
 /*---------------------
   Anime Details
 -----------------------*/
+
 
 .book-details {
 	padding-top: 60px;

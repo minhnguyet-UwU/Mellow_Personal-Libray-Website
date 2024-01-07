@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -65,13 +66,129 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-container">
-                            <form class="search-part">
-                                <input placeholder="Search" class="search-box">
-                                <button class="search-icon">
+                            <form class="search-part" onsubmit="event.preventDefault();">
+                                <input id="searchInput" placeholder="Search" class="search-box"
+                                    oninput="searchBooks(this.value.toLowerCase())" onfocus="alignSuggestionsLeft()"
+                                    onblur="hideSuggestions()">
+                                <ul id="searchResults" class="search-suggestions"></ul>
+                                <button type="submit" class="search-icon">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </form>
                         </a>
+
+
+                        <script>
+                            function alignSuggestionsLeft() {
+                                const searchInput = document.getElementById('searchInput');
+                                const suggestionsList = document.getElementById('searchResults');
+
+                                // Set the left position of the suggestions list to match the left side of the input
+                                suggestionsList.style.left = searchInput.offsetLeft + 'px';
+
+                                // Display the suggestions list
+                                suggestionsList.style.display = 'block';
+                            }
+
+                            function hideSuggestions() {
+                                const suggestionsList = document.getElementById('searchResults');
+
+                                // Hide the suggestions list
+                                suggestionsList.style.display = 'none';
+                            }
+
+                            function searchBooks(query) {
+                                const productItems = document.getElementsByClassName('product__item');
+                                const searchResultsContainer = document.getElementById('searchResults');
+
+                                // Clear previous search results
+                                searchResultsContainer.innerHTML = '';
+
+                                // Show suggestions only when there is input
+                                if (query.trim() !== '') {
+                                    // Track the number of displayed suggestions
+                                    let displayedSuggestions = 0;
+
+                                    // Iterate over product items to find matches
+                                    for (const productItem of productItems) {
+                                        const productText = productItem.querySelector('.product__item__text');
+                                        const title = productText.dataset.title.toLowerCase();
+                                        const author = productText.dataset.author.toLowerCase();
+                                        const match = title.includes(query) || author.includes(query);
+
+                                        if (match && displayedSuggestions < 3) {
+                                            const resultItem = document.createElement('li');
+                                            const resultLink = document.createElement('a');
+                                            const titleElement = document.createElement('h3');
+                                            const authorElement = document.createElement('span');
+
+                                            titleElement.textContent = title;
+                                            authorElement.textContent = `by ${author}`;
+
+                                            authorElement.style.color = '#b7b7b7';
+                                            authorElement.style.fontStyle = 'italic';
+                                            authorElement.style.fontSize = '13px';
+
+                                            // Add styles to title and author elements
+                                            titleElement.style.fontWeight = 'bold';
+                                            titleElement.style.fontSize = '14px';
+                                            titleElement.style.color = '#fff'; // Change the color to your desired value
+                                            // Add more styles as needed
+
+                                            // Append title and author elements to the link
+                                            resultLink.appendChild(titleElement);
+                                            resultLink.appendChild(authorElement);
+
+                                            resultLink.addEventListener('click', function () {
+                                                // Populate the input field with the selected result
+                                                document.getElementById('searchInput').value = `${title} by ${author}`;
+                                                // Hide the search results
+                                                hideSuggestions();
+                                            });
+
+                                            // Append the link to the result item
+                                            resultItem.appendChild(resultLink);
+
+                                            // Append the result item to the search results container
+                                            searchResultsContainer.appendChild(resultItem);
+
+                                            // Increment the displayed suggestions counter
+                                            displayedSuggestions++;
+                                        }
+
+                                        productItem.style.display = match ? 'block' : 'none';
+                                    }
+
+                                    // Toggle visibility of the search results container
+                                    searchResultsContainer.style.display = 'block';
+                                } else {
+                                    // If there is no input, hide suggestions
+                                    hideSuggestions();
+                                }
+                            }
+
+
+
+                            // Close search results when clicking outside the search container or its input
+                            document.addEventListener('click', function (event) {
+                                const searchContainer = document.querySelector('.search-container');
+                                const searchInput = document.getElementById('searchInput');
+                                const searchResultsContainer = document.getElementById('searchResults');
+
+                                if (!event.target.closest('.search-container') && event.target !== searchInput) {
+                                    hideSuggestions();
+                                }
+                            });
+
+                            // Hide suggestions when mouse leaves the search part
+                            document.querySelector('.search-part').addEventListener('mouseleave', function () {
+                                hideSuggestions();
+                            });
+
+
+                        </script>
+
+
                         <a href="./profile.html"><span class="icon_profile"></span></a>
                     </div>
                 </div>
@@ -89,19 +206,21 @@
                 <span class="border-right"> </span>
                 <span class="border-bottom"> </span>
                 <span class="border-left"> </span>
-            <div class="hero__items set-bg" data-setbg="img/hero/test.jpg">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <h2>Where stories come to life </h2>
-                            <p>"Dive into a world of endless possibilities and captivating reads!"</p>
+                <div class="hero__items set-bg" data-setbg="img/hero/test.jpg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h2>Where stories come to life </h2>
+                                <p>"Dive into a world of endless possibilities and captivating reads!"</p>
+                            </div>
+                            <h2 style="color: #fff; font-weight: 700; margin-bottom: 8px;">Where stories come to life
+                            </h2>
+                            <p style="color: #b7b7b7; font-style: italic;">"Dive into a world of endless possibilities
+                                and captivating reads!"</p>
                         </div>
-                        <h2 style="color: #fff; font-weight: 700; margin-bottom: 8px;">Where stories come to life </h2>
-                            <p style="color: #b7b7b7; font-style: italic;">"Dive into a world of endless possibilities and captivating reads!"</p>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- Normal Breadcrumb End -->
     <!-- Hero Section Begin -->
@@ -133,7 +252,8 @@
                                         <div class="star"><i class="fa fa-star-half-o"></i> 4.3</div>
                                         <div class="comment"><i class="fa fa-comments-o"></i> 208,846</div>
                                     </div>
-                                    <div class="product__item__text">
+                                    <div class="product__item__text" data-title="The Hunger Games"
+                                        data-author="Suzanne Collins">
                                         <ul>
                                             <li>Young Adult</li>
                                             <li>Fiction</li>
@@ -150,7 +270,9 @@
                                         <div class="star"><i class="fa fa-star-half-o"></i> 4.5</div>
                                         <div class="comment"><i class="fa fa-comments-o"></i> 60,656</div>
                                     </div>
-                                    <div class="product__item__text">
+                                    <div class="product__item__text"
+                                        data-title="Harry Potter and the Order of the Phoenix"
+                                        data-author="Suzanne Collins">
                                         <ul>
                                             <li>Young Adult</li>
                                             <li>Fiction</li>
@@ -167,7 +289,8 @@
                                         <div class="star"><i class="fa fa-star-half-o"></i> 4.28</div>
                                         <div class="comment"><i class="fa fa-comments-o"></i> 108,498</div>
                                     </div>
-                                    <div class="product__item__text">
+                                    <div class="product__item__text" data-title="Pride and Prejudice"
+                                        data-author="Author 1">
                                         <ul>
                                             <li>Young Adult</li>
                                             <li>Fiction</li>
@@ -184,7 +307,8 @@
                                         <div class="star"><i class="fa fa-star-half-o"></i> 4.26</div>
                                         <div class="comment"><i class="fa fa-comments-o"></i> 114,288</div>
                                     </div>
-                                    <div class="product__item__text">
+                                    <div class="product__item__text" data-title="To Kill a Mockingbird"
+                                        data-author="Author 1">
                                         <ul>
                                             <li>Young Adult</li>
                                             <li>Fiction</li>
@@ -201,7 +325,7 @@
                                         <div class="star"><i class="fa fa-star-half-o"></i> 4.39</div>
                                         <div class="comment"><i class="fa fa-comments-o"></i> 141,118</div>
                                     </div>
-                                    <div class="product__item__text">
+                                    <div class="product__item__text" data-title="The Book Thief" data-author="Author 1">
                                         <ul>
                                             <li>Young Adult</li>
                                             <li>Fiction</li>
@@ -218,7 +342,7 @@
                                         <div class="star"><i class="fa fa-star-half-o"></i> 3.65</div>
                                         <div class="comment"><i class="fa fa-comments-o"></i> 126,947</div>
                                     </div>
-                                    <div class="product__item__text">
+                                    <div class="product__item__text" data-title="Twilight" data-author="Author 1">
                                         <ul>
                                             <li>Young Adult</li>
                                             <li>Fiction</li>

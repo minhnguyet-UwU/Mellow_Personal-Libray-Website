@@ -109,14 +109,16 @@
                     <p class="user-mail"><i class="fa fa-envelope"></i> Brightisaac80@gmail.com</p>
                     <div class="user-bio" style="margin: 20px 0;">
                         <h3 style="color: #fff; margin-bottom: 10px">Bio</h3>
-                        <p class="bio"style="color: #b7b7b7;">
+                        <p class="bio" style="color: #b7b7b7;" contenteditable="false">
                             Lorem ipsum dolor sit amet, hello how consectetur adipisicing elit. Sint consectetur
-                            provident magni yohoho consequuntur, voluptatibus ghdfff exercitationem at quis similique.
-                            Optio, amet!
+                            provident
+                            magni yohoho consequuntur, voluptatibus ghdfff exercitationem at quis similique. Optio,
+                            amet!
                         </p>
                     </div>
                     <div class="profile-btn">
-                        <button class="createbtn" id="Create-post"><i class="fa fa-pencil"></i> Edit profile</button>
+                        <button class="createbtn" id="Create-post" onclick="toggleEdit()"><i class="fa fa-pencil"></i>
+                            Edit profile</button>
                     </div>
                     <div class="user-rating">
                         <h3 class="rating">4.5</h3>
@@ -132,12 +134,36 @@
                             </div>
                             <span class="no-of-user-rate"><span>123</span>&nbsp;&nbsp;reviews</span>
                         </div>
-
                     </div>
                 </div>
-
             </div>
-            <div class="right-side" style="height: 100%;">
+
+            <script>
+                function toggleEdit() {
+                    const bioElement = document.querySelector('.bio');
+
+                    // Toggle the contenteditable attribute
+                    bioElement.contentEditable = bioElement.contentEditable === 'true' ? 'false' : 'true';
+
+                    // Change button text and add pencil icon based on the editing state
+                    const editButton = document.getElementById('Create-post');
+                    const editButtonText = document.getElementById('editButtonText');
+
+                    if (bioElement.contentEditable === 'true') {
+                        // In edit mode, show "Save Changes" text and add pencil icon
+                        editButton.innerHTML = '<i class="fa fa-floppy-o" style="margin-right: 5px;"></i> Save Changes';
+                        editButtonText.textContent = 'Save Changes';
+                        bioElement.focus();
+                    } else {
+                        // In non-edit mode, show "Edit Profile" text and add pencil icon
+                        editButton.innerHTML = '<i class="fa fa-pencil" style="margin-right: 5px;"></i> Edit Profile';
+                        editButtonText.textContent = 'Edit Profile';
+                    }
+                }
+
+            </script>
+
+            <div class="right-side" style="height: 100%; margin-left: 30px;">
                 <div class="nav">
                     <ul>
                         <li onclick="tabs(0)" class="user-post active"> Activity</li>
@@ -149,8 +175,8 @@
                 </div>
                 <div class="profile-body" style="width: 100%;">
                     <div class="profile-posts tab">
-                        <h3 style="color: #fff;">Your Post</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
+                        <h3 style="color: #fff; padding: 15px 0 15px 0;">Your Post</h3>
+                        <p style="padding:0 10px 0 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
                             quidem quasi, tenetur molestiae. Architecto mollitia laborum possimus iste esse. Perferendis
                             tempora consectetur, quae qui nihil voluptas. Maiores debitis
                             repellendus excepturi quisquam temporibus quam nobis voluptatem, reiciendis distinctio
@@ -185,9 +211,12 @@
                                 <br>
                                 "Have a seat cause we bloody need to talk about trans lives."
                                 <br><br>
-                                I love Harry Potter as much as anyone, which is why I urge everyone who spends money on these books to also support the trans community.
+                                I love Harry Potter as much as anyone, which is why I urge everyone who spends money on
+                                these books to also support the trans community.
                                 <br><br>
-                                To say it with the author's words: “If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals.” Well.</p>
+                                To say it with the author's words: “If you want to know what a man’s like, take a good
+                                look at how he treats his inferiors, not his equals.” Well.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -432,7 +461,7 @@
 
     button.chatbtn:hover,
     button.createbtn:hover {
-        background: rgba(288, 0, 70, 0.9);
+        background: #1F6E99;
     }
 
     button.chatbtn i,
@@ -442,18 +471,21 @@
 
     .user-rating {
         display: flex;
+        margin-top: 10px;
     }
 
     .user-rating h3 {
         font-size: 2.5rem;
-        font-weight: 200;
-        margin-right: 5px;
+        font-weight: 500;
+        margin-right: 10px;
         letter-spacing: 1px;
-        color: #666;
+        color: #fff;
     }
 
     .user-rating .no-of-user-rate {
         font-size: 0.9rem;
+        color: gray;
+        font-style: italic;
     }
 
     .rate {
@@ -616,8 +648,6 @@
         margin: 20px auto;
         font-weight: 700;
     }
-
-    
 </style>
 
 </html>
