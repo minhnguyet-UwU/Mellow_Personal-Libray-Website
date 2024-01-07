@@ -108,6 +108,7 @@ ol {
 	margin: 0;
 }
 
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -424,6 +425,7 @@ input::placeholder {
 
 .header {
 	background: #0A0C10;
+	position: fixed; z-index: 1000; width: 100%;
 }
 
 .header__logo {
@@ -716,7 +718,6 @@ input::placeholder {
 
 .border-animation {
   position: relative;
-  padding: 20px 30px;
   overflow: hidden;
 }
 
@@ -1172,13 +1173,17 @@ input::placeholder {
 	/* Initially at the top */
 	width: 260px;
 	text-align: center;
+	padding-top: 50px;
 }
 
 .sticky-element.fixed {
-	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
+    position: fixed;
+    top: 0; /* Set this to 0 to ensure the top of the image is fully visible */
+    width: 260px;
+    text-align: center;
+    transform: translateY(0);
 }
+
 
 .sticky-element.scroll-with-content {
 	position: static;

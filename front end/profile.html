@@ -73,7 +73,7 @@
                                 </button>
                             </form>
                         </a>
-                        <a href="./profile.html"><span class="icon_profile"></span></a>
+                        <a href="./profile.html" class="active"><span class="icon_profile"></span></a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
     </header>
     <!-- Header End -->
 
-    <div class="container">
+    <div class="container" style="position: relative; top: 65.5px; padding-bottom: 60px;">
         <div class="profile-header">
             <div class="profile-img">
                 <img src="./img/ava.png" width="200" alt="Profile Image">
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <div class="main-bd">
+        <div class="main-bd" style="padding-bottom: 100px;">
             <div class="left-side">
                 <div class="profile-side">
                     <p class="mobile-no"><i class="fa fa-phone"></i> +23470xxxxx700</p>
@@ -176,7 +176,7 @@
                 <div class="profile-body" style="width: 100%;">
                     <div class="profile-posts tab">
                         <h3 style="color: #fff; padding: 15px 0 15px 0;">Your Post</h3>
-                        <p style="padding:0 10px 0 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
                             quidem quasi, tenetur molestiae. Architecto mollitia laborum possimus iste esse. Perferendis
                             tempora consectetur, quae qui nihil voluptas. Maiores debitis
                             repellendus excepturi quisquam temporibus quam nobis voluptatem, reiciendis distinctio
@@ -218,6 +218,16 @@
                                 look at how he treats his inferiors, not his equals.” Well.
                             </p>
                         </div>
+                    </div>
+                    <div class="profile-following tab">
+                        <h1>User reviews</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur officia, aperiam
+                            quidem quasi, tenetur molestiae. Architecto mollitia laborum possimus iste esse. Perferendis
+                            tempora consectetur, quae qui nihil voluptas. Maiores debitis
+                            repellendus excepturi quisquam temporibus quam nobis voluptatem, reiciendis distinctio
+                            deserunt vitae! Maxime provident, distinctio animi commodi nemo, eveniet fugit porro quos
+                            nesciunt quidem a, corporis nisi dolorum minus sit eaque error
+                            sequi ullam. Quidem ut fugiat, praesentium velit aliquam!</p>
                     </div>
                 </div>
             </div>
@@ -498,7 +508,7 @@
     }
 
     .nav {
-        width: 100%;
+        width: 99.2%;
         z-index: -1;
         margin-left: 20px;
         margin-top: 5px;
@@ -521,9 +531,13 @@
         cursor: pointer;
         text-align: center;
         transition: all 0.2s ease-in-out;
+        font-weight: 700;
     }
 
-    .nav ul li:hover,
+    .nav ul li:hover {
+        color: #427D9D;
+        transition: color 0.3s ease;
+    }
     .nav ul li.active {
         box-shadow: 0px -3px 0px #427D9D inset;
     }
@@ -535,11 +549,12 @@
 
     .tab {
         display: none;
-    }
-
-    .tab {
         margin: 20px;
         width: 100%;
+    }
+
+    .tab p {
+        padding: 0 15px 0 15px;
     }
 
     @media (max-width: 1100px) {
