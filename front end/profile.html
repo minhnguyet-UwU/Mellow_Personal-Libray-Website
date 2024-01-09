@@ -105,8 +105,9 @@
         <div class="main-bd" style="padding-bottom: 100px;">
             <div class="left-side">
                 <div class="profile-side">
-                    <p class="mobile-no"><i class="fa fa-phone"></i> +23470xxxxx700</p>
-                    <p class="user-mail"><i class="fa fa-envelope"></i> Brightisaac80@gmail.com</p>
+                    <p class="user-location" contenteditable="false"><i class="fa fa-map-marker"></i> Hanoi, Vietnam</p>
+                    <p class="mobile-no" contenteditable="false"><i class="fa fa-phone"></i> +23470xxxxx700</p>
+                    <p class="user-mail" contenteditable="false"><i class="fa fa-envelope"></i> Brightisaac80@gmail.com</p>
                     <div class="user-bio" style="margin: 20px 0;">
                         <h3 style="color: #fff; margin-bottom: 10px">Bio</h3>
                         <p class="bio" style="color: #b7b7b7;" contenteditable="false">
@@ -140,9 +141,15 @@
 
             <script>
                 function toggleEdit() {
+                    const locationElement = document.querySelector('.user-location');
+                    const phoneElement = document.querySelector('.mobile-no');
+                    const mailElement = document.querySelector('.user-mail');
                     const bioElement = document.querySelector('.bio');
 
                     // Toggle the contenteditable attribute
+                    locationElement.contentEditable = locationElement.contentEditable === 'true' ? 'false' : 'true';
+                    phoneElement.contentEditable = phoneElement.contentEditable === 'true' ? 'false' : 'true';
+                    mailElement.contentEditable = mailElement.contentEditable === 'true' ? 'false' : 'true';
                     bioElement.contentEditable = bioElement.contentEditable === 'true' ? 'false' : 'true';
 
                     // Change button text and add pencil icon based on the editing state
@@ -154,6 +161,10 @@
                         editButton.innerHTML = '<i class="fa fa-floppy-o" style="margin-right: 5px;"></i> Save Changes';
                         editButtonText.textContent = 'Save Changes';
                         bioElement.focus();
+                        locationElement.focus();
+                        phoneElement.focus();
+                        bioElement.focus();
+
                     } else {
                         // In non-edit mode, show "Edit Profile" text and add pencil icon
                         editButton.innerHTML = '<i class="fa fa-pencil" style="margin-right: 5px;"></i> Edit Profile';
@@ -175,7 +186,20 @@
                 </div>
                 <div class="profile-body" style="width: 100%;">
                     <div class="profile-activity tab">
-                        <h3 style="color: #fff; padding: 0 0 15px 0;">Recent updates</h3>
+                        <h4 style="color: #fff; padding: 15px 0 15px 0;">Recent updates</h4>
+                        <div class="activity-card">
+                            <p class="activity-title" style="color: #fff;">You have followed Higashino Keigo</p>
+                            <div class="activity-container" style="display: flex; margin-left: 20px;">
+                                <div class="image" style="flex: 1; max-width: fit-content; margin-right: 30px;">
+                                    <img src="img/author/author1.jpg" style="display: block; height: 80px; border-radius: 4px;">
+                                </div>
+                                <div class="details" style="flex: 1;">
+                                    <h2>Details Section</h2>
+                                </div>
+                            </div>
+                            <p class="activity-date" style="margin: 15px 0px 0px 5px; display: block; font-size: 14px;">Sep 26, 2023 2:27PM</p>
+                            <hr>
+                        </div>
                         
                         <div class="activity-card">
                             <p class="activity-title">You have just followed Higashino Keigo</p>
@@ -203,18 +227,13 @@
                             </div>
                             <hr>
                         </div>
-                        <div class="activity-card">
-                            <p class="activity-title">You have just followed Higashino Keigo</p>
-                            <div class="activity-container" style="display: flex; margin-left: 20px;">
-                                <div class="image" style="flex: 1; max-width: fit-content;; margin-right: 30px;">
-                                    <img src="img/author/author1.jpg" style="display: block; height: 80px; border-radius: 4px;">
-                                </div>
-                                <div class="details" style="flex: 1;">
-                                    <h2>Details Section</h2>
-                                    <p>Add your details content here...</p>
-                                </div>
-                            </div>
-                            <hr>
+                        <div class="product__pagination" style="text-align: right; padding-top: 30px;">
+                            <a href="#" class="current-page">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#"><i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div class="profile-following tab">
@@ -480,6 +499,12 @@
         color: #427D9D;
     }
 
+    .user-location i {
+        margin-left: 2px;
+        color: #427D9D;
+        font-size: 15px;
+    }
+
     .profile-btn {
         display: flex;
     }
@@ -691,7 +716,7 @@
         }
     }
 
-    .tab h3 {
+    .tab h4 {
         display: flex;
         justify-content: center;
         margin: 20px auto;
