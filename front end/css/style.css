@@ -904,6 +904,10 @@ input::placeholder {
 	line-height: 26px;
 }
 
+.product__item__text h5 a:hover {
+	color: #427D9D;
+}
+
 .product__item__text span {
 	display: block;
 	font-size: 15px;
